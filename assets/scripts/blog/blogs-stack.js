@@ -27,7 +27,7 @@ let blogStack = () => {
                             <strong>${blogs.blogs[I].title}</strong>
                         </h3>
                         <p class="grey-text"></p>
-                        <a href="https://mdbootstrap.com/automated-app-start/" id='${
+                        <a href="https://mdbootstrap.com/automated-app-start/"  id='blog-${
                           blogs.blogs[I]._id
                         }' target="_blank" class="btn btn-primary btn-md">See blog
                             <i class="fa fa-play ml-2"></i>
