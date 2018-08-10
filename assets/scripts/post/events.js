@@ -1,19 +1,18 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
+const api = require('./api.js')
 
 const onCreatePost = function (event) {
     event.preventDefault()
     const data = getFormFields(event.target)
-    console.log('In onCreatePost in post events')
-    // do api
+    console.log('In onCreatePost in post events and the data is ', data)
+    api.createPost(data)
 }
 
-<<<<<<< HEAD
-
-=======
-// TODO handlers are not connected b/c do not yet have forms
->>>>>>> WIP Added routes for post
 const addHandler = () => {
-    // $('#create-post-button').on('click', onCreatePost)
+    $('#create-post-button').on('click', () =>
+    $("#create-post-modal").css("display", "block"))
+
+    $("#create-post").on("submit", onCreatePost)
 }
 
 module.exports = {

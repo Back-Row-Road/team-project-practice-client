@@ -1,7 +1,7 @@
 const config = require('./../config.js')
 const store = require('./../store.js')
 
-const getPosts = function {
+const getPosts = function () {
     return $.ajax({
         method: 'GET',
         url: config.apiUrl + '/posts',
