@@ -2,12 +2,8 @@
 const blogApi = require("./blog/blogs-Api.js");
 const blogs = require("./blog/blogs-stack.js");
 
-<<<<<<< HEAD
-const authEvents = require("./auth/events.js");
-=======
 const authEvents = require('./auth/events.js')
 const postEvents = require('./post/events.js')
->>>>>>> Added create post button and file structure
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -16,13 +12,7 @@ const postEvents = require('./post/events.js')
 // require('./example')
 
 $(() => {
-<<<<<<< HEAD
-  blogApi();
-  authEvents.addHandler();
-});
-=======
   blogApi()
   authEvents.addHandler()
   postEvents.addHandler()
 })
->>>>>>> Added create post button and file structure
