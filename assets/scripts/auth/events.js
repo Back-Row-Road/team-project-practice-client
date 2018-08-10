@@ -58,6 +58,11 @@ const addHandler = () => {
   $("#sign-in-button").on("click", () =>
     $("#sign-in-modal").css("display", "block")
   );
+
+  $("#create-blog-button").on("click", () =>
+    $("#create-blog-modal").css("display", "block")
+  );
+
   $("#change-password-button").on("click", () =>
     $("#change-password-modal").css("display", "block")
   );
