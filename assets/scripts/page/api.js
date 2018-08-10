@@ -24,6 +24,7 @@ const showPage = function () {
     url: config.apiUrl + '/pages',
   })
 }
+
 const updatePage = function (data) {
   return $.ajax({
     method: 'PATCH',
@@ -43,6 +44,7 @@ const deletePage = function (data) {
     }
   })
 }
+
 module.exports = {
   getPages,
   createPage,

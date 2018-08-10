@@ -38,6 +38,7 @@ const onDeletePage = (event) => {
 
 const addHandler = () => {
   // $('#create-page-button').on('click', onCreatePage)
+
 }
 
 module.exports = {
