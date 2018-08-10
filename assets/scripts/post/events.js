@@ -29,6 +29,7 @@ const onUpdatePost = function (event) {
     .catch(ui.postError)
 }
 
+// TODO handlers are not connected b/c do not yet have forms
 const addHandler = () => {
   $('#create-post-button').on('click', () =>
     $('#create-post-modal').css('display', 'block'))

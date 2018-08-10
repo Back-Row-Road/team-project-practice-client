@@ -12,7 +12,6 @@ const postEvents = require('./post/events.js')
 // require('./example')
 
 $(() => {
-
   blogApi()
   authEvents.addHandler()
   postEvents.addHandler()
