@@ -7,9 +7,13 @@ const onCreatePost = function (event) {
     // do api
 }
 
+<<<<<<< HEAD
 
+=======
+// TODO handlers are not connected b/c do not yet have forms
+>>>>>>> WIP Added routes for post
 const addHandler = () => {
-    $('#create-post-button').on('click', onCreatePost)
+    // $('#create-post-button').on('click', onCreatePost)
 }
 
 module.exports = {
