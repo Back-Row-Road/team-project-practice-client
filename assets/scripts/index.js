@@ -1,6 +1,6 @@
 "use strict";
-const blogApi = require("./blog/blogs-Api.js");
-const blogs = require("./blog/blogs-stack.js");
+// const blogApi = require("./blog/blogs-Api.js");
+// const blogs = require("./blog/blogs-stack.js");
 
 const authEvents = require("./auth/events.js");
 
@@ -11,6 +11,6 @@ const authEvents = require("./auth/events.js");
 // require('./example')
 
 $(() => {
-  blogApi();
-  authEvents.addHandler();
-});
+  // blogApi();
+  authEvents.addHandler()
+})
