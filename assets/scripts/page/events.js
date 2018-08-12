@@ -1,5 +1,13 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 
+const onGetPages = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.getPages()
+    .then(proposalUi.getPageSuccess)
+    .catch(proposalUi.failure)
+}
+
 const onCreatePage = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -22,14 +30,6 @@ const onUpdatePage = (event) => {
     .then(ui.updatePageSuccess)
     .catch(ui.failure)
 }
-
-// const onGetPage = (event) => {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   api.getPage()
-//     .then(proposalUi.getPageSuccess)
-//     .catch(proposalUi.failure)
-// }
 
 const onDeletePage = (event) => {
   event.preventDefault()

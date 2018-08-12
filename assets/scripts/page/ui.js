@@ -3,6 +3,14 @@
 const store = require('../store')
 const api = require('./api.js')
 
+const getPages = function (event) {
+  event.preventDefault()
+  $('.content').html('')
+  api.showProposals()
+    .then(ui.showPageSuccess)
+    .catch(ui.failure)
+}
+
 const createPageSuccess = function (data) {
   $('#message').text('Page successfully created')
   $('#message').css('background-color', 'green')
@@ -11,10 +19,10 @@ const createPageSuccess = function (data) {
 }
 
 const showPageSuccess = function (data) {
-  console.log(data)
-  const htmltemplate = proposalTemplate({proposals: data.proposals})
-  $('.content').append(htmltemplate)
-  $('.delete').on('click', onDeleteProposal)
+  $('#message').text('Page successfully created')
+  $('#message').css('background-color', 'green')
+  store.proposal = data.proposal
+  console.log('onCreatePageSuccess ran. Data is :', data)
 }
 
 const updatePageSuccess = function (data) {
@@ -31,20 +39,12 @@ const deletePageSuccess = function (data) {
   console.log('onUpdateSuccess ran. Data is :', data)
 }
 
-const onShowProposals = function (event) {
-  event.preventDefault()
-  $('.content').html('')
-  proposalApi.showProposals()
-    .then(proposalUi.showProposalSuccess)
-    .catch(proposalUi.onError)
-}
-
-const onUpdateProposal = (event) => {
+const onUpdatePage = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  proposalApi.updateProposal(data)
-    .then(proposalUi.updateProposalSuccess)
-    .catch(proposalUi.failure)
+  api.updatePage(data)
+    .then(ui.updatePageSuccess)
+    .catch(ui.failure)
 }
 
 // const onGetProposals = (event) => {

@@ -7,7 +7,6 @@ const getPages = function () {
     url: config.apiUrl + '/pages',
   })
 }
-
 const createPage = function (data) {
   return $.ajax({
     method: 'POST',
@@ -18,7 +17,13 @@ const createPage = function (data) {
     data
   })
 }
-
+// since it is singular, should it be 'page"?
+const showPage = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/pages',
+  })
+}
 const updatePage = function (data) {
   return $.ajax({
     method: 'PATCH',
@@ -29,7 +34,6 @@ const updatePage = function (data) {
     data
   })
 }
-
 const deletePage = function (data) {
   return $.ajax({
     method: 'DELETE',
@@ -39,12 +43,10 @@ const deletePage = function (data) {
     }
   })
 }
-
-
-
 module.exports = {
   getPages,
   createPage,
+  showPage,
   updatePage,
   deletePage
 }
