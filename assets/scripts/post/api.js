@@ -2,17 +2,10 @@ const config = require('./../config.js')
 const store = require('./../store.js')
 
 const getPosts = function () {
-<<<<<<< HEAD
-  return $.ajax({
-    method: 'GET',
-    url: config.apiUrl + '/posts',
-  })
-=======
     return $.ajax({
         method: 'GET',
         url: config.apiUrl + '/posts'
     })
->>>>>>> Altered create post form html to result in a single post object. Also typos.
 }
 
 const createPost = function (data) {
