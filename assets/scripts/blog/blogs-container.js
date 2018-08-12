@@ -1,4 +1,4 @@
-let blogsContainer = {
-  blogs: ""
-};
-module.exports = blogsContainer;
+const blogsContainer = {
+  blogs: ''
+}
+module.exports = blogsContainer

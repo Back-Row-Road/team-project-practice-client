@@ -1,12 +1,12 @@
-const apiUrl = require("../config.js");
-const blogContainer = require("./blogs-container.js");
-const blogStack = require("./blogs-stack.js");
-const createBlogRequest = require("./create-blogRequest.js");
-const generateBlog = require("./show-blog.js");
+const apiUrl = require('../config.js');
+const blogContainer = require('./blogs-container.js');
+const blogStack = require('./blogs-stack.js');
+const createBlogRequest = require('./create-blogRequest.js');
+const generateBlog = require('./show-blog.js');
 let getBlog = () => {
   $.ajax({
-    url: apiUrl.apiUrl + "/blogs",
-    method: "GET"
+    url: apiUrl.apiUrl + '/blogs',
+    method: 'GET'
   })
     .then(data => {
       blogContainer.blogs = data;
@@ -16,7 +16,7 @@ let getBlog = () => {
       generateBlog();
     })
     .catch(() => {
-      console.log("error");
+      console.log('error');
     });
 };
 
