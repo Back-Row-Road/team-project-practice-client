@@ -1,17 +1,21 @@
 const config = require('./../config.js')
 const store = require('./../store.js')
 
-const getPosts = function () {
-    return $.ajax({
-        method: 'GET',
-        url: config.apiUrl + '/posts'
-    })
-}
-
 const createPost = function (data) {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/posts',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const showPost = function (data) {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/posts' + data.post.id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -43,7 +47,7 @@ const deletePost = function (data) {
 
 
 module.exports = {
-    getPosts,
+    showPost,
     createPost,
     updatePost,
     deletePost
